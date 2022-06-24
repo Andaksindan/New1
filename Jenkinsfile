@@ -10,7 +10,7 @@ pipeline {
         UIPATH_ORCH_URL = "https://cloud.uipath.com/"
         UIPATH_ORCH_LOGICAL_NAME = "cbkpozxw"
         UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-        UIPATH_ORCH_FOLDER_NAME = "My Workspace"
+        UIPATH_ORCH_FOLDER_NAME = "Shared"
     }
 
 
@@ -62,7 +62,7 @@ pipeline {
                 orchestratorAddress: "${UIPATH_ORCH_URL}",
                 orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
                 folderName: "${UIPATH_ORCH_FOLDER_NAME}",
-                environments: 'My Workspace',
+                environments: 'Shared',
                 //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserK']
                 credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'VAC1'),
                 traceLevel: 'None',
